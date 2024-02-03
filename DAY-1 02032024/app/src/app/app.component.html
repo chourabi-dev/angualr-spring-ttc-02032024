@@ -1,0 +1,61 @@
+<!--<p>
+    <strong>username:</strong> {{username}}
+</p>
+
+
+<p>
+    what doses do ?
+    simply calls toString of the object !!
+</p>
+
+{{ year }}
+
+<p>
+    {{ access }}
+</p>
+
+<p>
+    today : {{ date }}
+</p>
+
+
+
+<h3>Employees:</h3>
+
+<ul>
+    <li   *ngFor="let e of employees"   > {{e}} </li>
+</ul>
+
+
+
+<p>
+    user :  {{ user.fullname }} / {{ user.email }}
+</p>-->
+
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>product</th>
+            <th>price</th>
+            <th>stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{ p.id }}</td>
+            <td>{{ p.product }}</td>
+            <td>{{ p.price }}</td>
+            <td>
+                <span *ngIf="p.stock != 0" >{{ p.stock }} element(s)</span>
+
+                <span   *ngIf=" p.stock == 0 "   style="color: red;"   >Out of stock</span>
+
+            </td>
+            
+
+        </tr>
+    </tbody>
+</table>
+
