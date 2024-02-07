@@ -23,3 +23,14 @@ ng new app_name
 5 - start the app
 ng serve -o  / npm start -o
 
+
+6 - Add css file from bootstrap !!!!
+
+
+
+
+
+
+
+
+
