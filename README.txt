@@ -20,11 +20,30 @@ ng version
 ng new app_name
 
 
+
+
 5 - start the app
 ng serve -o  / npm start -o
 
 
 6 - Add css file from bootstrap !!!!
+npm i bootstrap
+
+
+7 - create new component
+ng g c comp_name
+
+
+7 - create new guard
+ng generate guard guard_name
+ng g g guard_name
+
+
+8 - create new service 
+ng g s service_name
+
+
+
 
 
 

@@ -10,6 +10,11 @@ import { FooterComponent } from './elements/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { CompanyPageComponent } from './pages/about/company-page/company-page.component';
+import { TeamPageComponent } from './pages/about/team-page/team-page.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     FooterComponent,
     HomePageComponent,
     AboutPageComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    CompanyPageComponent,
+    TeamPageComponent,
+    UsersComponent,
+    UserDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

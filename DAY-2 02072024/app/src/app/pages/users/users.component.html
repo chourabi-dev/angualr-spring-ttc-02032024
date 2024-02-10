@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let u of users">
+        <p>
+            {{ u.fullname }}
+        </p>
+        <p>
+            <a  [routerLink]=" '/users/details/'+u.id ">show more data</a>
+        </p>
+    </li>
+</ul>

@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+
+<div class="container mt-5">
+
+ 
+ 
+    <form   [formGroup]="form"    (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label for="">Product  <span class="text-danger" *ngIf="form.controls.product.valid == false">*</span> </label>
+            <input type="text" class="form-control" formControlName="product">
+
+            <p *ngIf=" form.controls.product.dirty == true  &&  form.controls.product.valid == false  ">
+                <small class="text-danger" >Name too short</small>
+            </p>
+
+        </div>
+        <div class="mb-3">
+            <label for="">Qunatity</label>
+            <input type="number" class="form-control" [ngClass]="form.controls.quantity.valid == false ? (   form.controls.quantity.dirty == true ? 'is-invalid' : '' )   :    'is-valid'     " formControlName="quantity">
+        </div>
+        <div class="mb-3">
+            <label for="">Price</label>
+            <input type="number" class="form-control is-invalid" formControlName="price"  [ngClass]="form.controls.price.valid == false ? 'is-invalid':'is-valid'   " >
+        </div> 
+        <button type="submit" class="btn btn-primary"  [disabled]=" ! form.valid "   >Add product</button>
+    </form>
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qunatity</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>
+                    {{ p.product }}
+                </td>
+                <td>
+                    {{ p.price | currency }}
+                </td>
+                <td>
+                    {{ p.quantity | number }}
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
