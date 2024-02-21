@@ -44,6 +44,9 @@ ng g s service_name
 
 
 
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+
+
 
 
 
