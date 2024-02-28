@@ -48,6 +48,11 @@ https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
 
 
 
+DOC Many To Many
+https://www.baeldung.com/jpa-many-to-many
+
+
+
 
 
 
