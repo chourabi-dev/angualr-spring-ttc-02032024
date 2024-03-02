@@ -1,0 +1,28 @@
+
+<p *ngIf="loading == true" style="text-align: center; margin-top: 50px;">
+    Please wait...
+</p>
+
+
+
+<div *ngIf="loading == false" >
+
+
+    
+<div *ngIf=" errorMessage!= '' ">
+    <p>
+        {{ errorMessage }}
+    </p>
+    <button (click)="intiDATA()" >try again</button>
+</div>
+
+<div *ngIf=" errorMessage == '' ">
+    <h3>List of users</h3>
+
+    <div>
+        <app-user-details  [user]="u"   *ngFor="let u of users"></app-user-details>
+    </div>
+</div>
+
+
+</div>

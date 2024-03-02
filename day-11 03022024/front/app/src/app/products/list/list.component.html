@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">
+        <div>
+            <h3>Products</h3>
+            <a class="btn btn-sm btn-primary" routerLink="/products/new">Add new</a>
+        </div>
+        
+    </div>
+
+    <div *ngIf="loading">
+        <p class="text-center text-muted">Please wait...</p>
+    </div>
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <th>#</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Created at</th>
+                <th>Category</th>
+                
+                
+                <th class="text-end">Actions</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of products">
+                    <td>{{ p.id }}</td>
+                    <td>{{ p.product }}</td>
+                    <td>{{ p.price | currency }}</td>
+                    <td>{{ p.stock |number }}</td>
+                    <td>{{ p.createdAt | date:'medium' }}</td>
+                    
+                    <td>{{ p.category.name }}</td>
+                    
+                    
+                    <td class="text-end">
+                        <a [routerLink]="  '/products/edit/'+p.id  "  class="btn btn-secondary btn-sm me-3" >Edit</a>
+                        <a   class="btn btn-danger btn-sm " (click)="delete(p.id)" >Delete</a>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

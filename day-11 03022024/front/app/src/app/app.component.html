@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let m of menu">
+            <a [routerLink]=" m.path "> {{ m.title }} </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
